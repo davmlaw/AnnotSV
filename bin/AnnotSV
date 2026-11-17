@@ -106,6 +106,9 @@ if {![info exists g_AnnotSV(Version)]} {
 if {![info exists g_AnnotSV(Version)]} {
     set g_AnnotSV(Version) "X.X"
 }
+# davmlaw/AnnotSV fork: its output differs from upstream's (the partially overlapping benign SV fix,
+# lgmgeo/AnnotSV#360), so it reports its own version. The suffix changes only when the output does.
+append g_AnnotSV(Version) "-vg3"
 
 puts "AnnotSV $g_AnnotSV(Version)"
 if {[regexp "\-version|\-Version" $argv]} {
